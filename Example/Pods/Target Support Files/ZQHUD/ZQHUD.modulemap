@@ -1,0 +1,6 @@
+framework module ZQHUD {
+  umbrella header "ZQHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

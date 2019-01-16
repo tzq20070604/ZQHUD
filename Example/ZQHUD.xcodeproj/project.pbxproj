@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0508288DD47B8D062DC1F765 /* Pods-ZQHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQHUD_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQHUD_Example/Pods-ZQHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5490089633FDE8F398344EB3 /* Pods-ZQHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQHUD_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQHUD_Example/Pods-ZQHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5C645CBAAAF8B0B23B8A8092 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5C645CBAAAF8B0B23B8A8092 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZQHUD_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQHUD_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +64,9 @@
 		7A2AC9F9E844F9477D5B4346 /* Pods-ZQHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQHUD_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQHUD_Tests/Pods-ZQHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F340FF1D184B9195A86841E /* Pods_ZQHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZQHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		99ED20F4B1B4A4AA256A3266 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		99ED20F4B1B4A4AA256A3266 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EB93BF0CFAA5DE4FBE226AA7 /* Pods-ZQHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQHUD_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQHUD_Tests/Pods-ZQHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EF79B3BC972962774B200A7B /* ZQHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZQHUD.podspec; path = ../ZQHUD.podspec; sourceTree = "<group>"; };
+		EF79B3BC972962774B200A7B /* ZQHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZQHUD.podspec; path = ../ZQHUD.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = tzq20070604;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 8X554THR86;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -370,12 +373,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZQHUD_Example/Pods-ZQHUD_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ZQHUD/ZQHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZQHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +529,7 @@
 			baseConfigurationReference = 0508288DD47B8D062DC1F765 /* Pods-ZQHUD_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8X554THR86;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZQHUD/ZQHUD-Prefix.pch";
 				INFOPLIST_FILE = "ZQHUD/ZQHUD-Info.plist";
@@ -535,6 +545,7 @@
 			baseConfigurationReference = 5490089633FDE8F398344EB3 /* Pods-ZQHUD_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8X554THR86;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZQHUD/ZQHUD-Prefix.pch";
 				INFOPLIST_FILE = "ZQHUD/ZQHUD-Info.plist";
